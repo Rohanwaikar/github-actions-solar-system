@@ -53,8 +53,9 @@ jobs:
           - name: Install Dependencies
             run: npm install
 
-          - continue-on-error: true
-            run: npm run code-coverage
+          - name: Run Code Coverage
+            continue-on-error: true
+            run: npm run coverage
             
 
           - name: Upload code coverage reports
